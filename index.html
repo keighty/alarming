@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Alarming!</title>
+  </head>
+  <body>
+    <select id="hour" name="hour">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="30">30</option>
+    </select>
+    <select id="min" name="min">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="30">30</option>
+    </select>
+
+    <button id="button" onclick="addAlarm()">Set alarm</button>
+
+    <div id="time"></div>
+    <div id="alarms"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
