@@ -1,27 +1,26 @@
 <html>
   <head>
     <title>Alarming!</title>
+    <link rel='stylesheet' href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   </head>
   <body>
-    <select id="hour" name="hour">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="30">30</option>
-    </select>
-    <select id="min" name="min">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="30">30</option>
-    </select>
+    <div id="radiobody">
+      <div id="timepicker">
+        <select id="hour"></select>
+        <select id="min"></select>
+        <button id="button" onclick="addAlarm()">Set alarm</button>
+        <button id="button" onclick="snooze()">Snooze</button>
+      </div>
+      <div id="time"></div>
 
-    <button id="button" onclick="addAlarm()">Set alarm</button>
+      <div id="alarms"></div>
 
-    <div id="time"></div>
-    <div id="alarms"></div>
-    <script src="./index.js"></script>
+      <script src="./index.js"></script>
+      <script src="./time-picker.js"></script>
+    </div>
+
+    <audio id="rooster" src="./rooster-alarm.mp3" autostart="false" ></audio>
+
   </body>
 </html>

@@ -1,0 +1,36 @@
+body {
+  background-color: lightgrey;
+}
+
+#time {
+  border: black solid 15px;
+  border-radius: 25px;
+  padding: 0.15em;
+  width: 50%;
+  height: 25%;
+  margin: auto;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 5em;
+  text-align: center;
+}
+
+#timepicker {
+  margin: auto;
+  border: aliceblue solid 3px;
+  width: 30%;
+  padding: 0.5em 0.5em 0 0.5em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+button {
+  border: aliceblue solid 5px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#alarms {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+}
