@@ -34,3 +34,9 @@ button {
   text-align: center;
   font-size: 2em;
 }
+
+.remove {
+  color: red;
+  padding-left: 0.25em;
+  font-family: monospace;
+}

@@ -7,9 +7,7 @@ setInterval(() => {
 
   if (alarmList.includes(text)) {
     alarm()
-    const index = alarmList.indexOf(text)
-    alarmList.splice(index, 1)
-    updateAlarmList()
+    removeAlarm(text)
   }
 }, 1000)
 
@@ -41,6 +39,12 @@ function addAlarm () {
   updateAlarmList()
 }
 
+function removeAlarm (alarm) {
+  const index = alarmList.indexOf(alarm)
+  alarmList.splice(index, 1)
+  updateAlarmList()
+}
+
 function snooze () {
   const snooze = new Date()
   snooze.setMinutes(snooze.getMinutes() + 10)
@@ -49,7 +53,7 @@ function snooze () {
 }
 
 function updateAlarmList () {
-    document.getElementById('alarms').innerHTML = alarmList.map(alarm => `<p>${alarm}</p>`).join('')
+    document.getElementById('alarms').innerHTML = alarmList.map(alarm => `<p>${alarm}<span class="remove" onclick="removeAlarm('${alarm}')">x</span></p>`).join('')
 }
 
 function alarm() {
